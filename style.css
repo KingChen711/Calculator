@@ -1,0 +1,255 @@
+:root {
+
+  /* theme 1 */
+  --bg-clr-main-1: hsl(222, 26%, 31%);
+  --bg-clr-toggle-and-keypad-1: hsl(223, 31%, 20%);
+  --bg-clr-screen-1: hsl(224, 36%, 15%);
+
+  --bg-clr-primary-key-1: hsl(30, 25%, 89%);
+  --shadow-clr-primary-key-1: hsl(28, 16%, 65%);
+
+  --bg-clr-secondary-key-1: hsl(225, 21%, 49%);
+  --shadow-clr-secondary-key-1: hsl(224, 28%, 35%);
+
+  --bg-clr-tertiary-key-1: hsl(6, 63%, 50%);
+  --shadow-clr-tertiary-key-1: hsl(6, 70%, 34%);
+
+  --text-clr-screen-1: white;
+  --text-clr-primary-key-1: hsl(221, 14%, 31%);
+  --text-clr-secondary-key-1: white;
+
+
+
+
+  /* theme 2 */
+  --bg-clr-main-2: hsl(0, 0%, 90%);
+  --bg-clr-toggle-and-keypad-2: hsl(0, 5%, 81%);
+  --bg-clr-screen-2: hsl(0, 0%, 93%);
+
+  --bg-clr-primary-key-2: hsl(45, 7%, 89%);
+  --shadow-clr-primary-key-2: hsl(35, 11%, 61%);
+
+  --bg-clr-secondary-key-2: hsl(185, 42%, 37%);
+  --shadow-clr-secondary-key-2: hsl(185, 58%, 25%);
+
+  --bg-clr-tertiary-key-2: hsl(25, 98%, 40%);
+  --shadow-clr-tertiary-key-2: hsl(25, 99%, 27%);
+
+  --text-clr-screen-2: hsl(60, 10%, 19%);
+  --text-clr-primary-key-2: hsl(60, 10%, 19%);
+  --text-clr-secondary-key-2: white;
+
+
+
+
+  /* theme 3 */
+  --bg-clr-main-3: hsl(268, 75%, 9%);
+  --bg-clr-toggle-and-keypad-3: hsl(268, 71%, 12%);
+  --bg-clr-screen-3: hsl(268, 71%, 12%);
+
+  --bg-clr-primary-key-3: hsl(268, 47%, 21%);
+  --shadow-clr-primary-key-3: hsl(290, 70%, 36%);
+
+  --bg-clr-secondary-key-3: hsl(281, 89%, 26%);
+  --shadow-clr-secondary-key-3: hsl(285, 91%, 52%);
+
+  --bg-clr-tertiary-key-3: hsl(176, 100%, 44%);
+  --shadow-clr-tertiary-key-3: hsl(177, 92%, 70%);
+
+  --text-clr-screen-3: hsl(52, 100%, 62%);
+  --text-clr-primary-key-3: hsl(52, 100%, 62%);
+  --text-clr-secondary-key-3: white;
+
+
+
+
+
+
+  /* defaults */
+  --bg-clr-main: var(--bg-clr-main-1);
+  --bg-clr-toggle-and-keypad: var(--bg-clr-toggle-and-keypad-1);
+  --bg-clr-screen: var(--bg-clr-screen-1);
+
+  --bg-clr-primary-key: var(--bg-clr-primary-key-1);
+  --shadow-clr-primary-key: var(--shadow-clr-primary-key-1);
+
+  --bg-clr-secondary-key: var(--bg-clr-secondary-key-1);
+  --shadow-clr-secondary-key: var(--shadow-clr-secondary-key-1);
+
+  --bg-clr-tertiary-key: var(--bg-clr-tertiary-key-1);
+  --shadow-clr-tertiary-key: var(--shadow-clr-tertiary-key-1);
+
+  --text-clr-screen: var(--text-clr-screen-1);
+  --text-clr-primary-key: var(--text-clr-primary-key-1);
+  --text-clr-secondary-key: var(--text-clr-secondary-key-1);
+
+
+
+
+
+  --ff: 'League Spartan', sans-serif;
+
+  --fs-300: 1rem;
+  --fs-400: 1.5rem;
+  --fs-500: 3rem;
+
+  --wi-calculator: 500px;
+
+}
+
+body {
+  font-size: 2rem;
+  font-family: var(--ff);
+  background: var(--bg-clr-main);
+  user-select: none;
+}
+
+.CALCULATOR
+{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.container {
+  width: var(--wi-calculator);
+}
+
+.container .list-theme {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: var(--fs-300);
+  transform: translateX(-7px);
+  color: var(--text-clr-screen)
+}
+
+.list-theme li+li {
+  margin-left: 15px;
+}
+
+header {
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-clr-screen);
+}
+
+header .theme {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+header .theme p {
+  font-size: var(--fs-300);
+}
+
+header .theme .toggle {
+  height: 1.5rem;
+  width: 4.4rem;
+  background: var(--bg-clr-toggle-and-keypad);
+  border-radius: 20px;
+  margin-left: 30px;
+  position: relative;
+  cursor: pointer;
+}
+
+header .theme .toggle .toggle-bt {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--bg-clr-tertiary-key);
+  left: 6px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.screen {
+  max-width: 100%;
+  font-size: var(--fs-500);
+  color: var(--text-clr-screen);
+  border-radius: 10px;
+  padding: 30px 30px 30px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--bg-clr-screen);
+  margin-block: 30px;
+}
+
+.screen .display
+{
+  width: 470px;
+  height: 48px;
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.pad {
+  max-width: 100%;
+  border-radius: 10px;
+  padding: 30px;
+  background: var(--bg-clr-toggle-and-keypad);
+}
+
+#smallKeys
+{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+  margin-bottom: 30px;
+}
+
+.key
+{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  padding-block:10px;
+  border-radius:10px;
+  cursor: pointer;
+}
+
+.key:active
+{
+  opacity: 0.5;
+}
+
+.key_primary
+{
+  background-color: var(--bg-clr-primary-key);
+  border-bottom: 4px solid var(--shadow-clr-primary-key);
+  color:var(--text-clr-primary-key);
+  font-size: 36px;
+}
+
+.key_secondary
+{
+  background-color: var(--bg-clr-secondary-key);
+  border-bottom: 4px solid var(--shadow-clr-secondary-key);
+  color:var(--text-clr-secondary-key);
+}
+
+.key_tertiary
+{
+  background-color: var(--bg-clr-tertiary-key);
+  border-bottom: 4px solid var(--shadow-clr-tertiary-key);
+  color:var(--text-clr-tertiary-key);
+}
+
+#bigKeys
+{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap:30px;
+}
